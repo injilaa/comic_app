@@ -1,0 +1,92 @@
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">Hey super-admin</a>
+    </div>
+  </div>
+</nav>
+<!--<form #f1="ngForm" (ngSubmit)="onclick3(f1)">-->
+
+    <!--<button (click)="showall()">show all users</button><br>-->
+    <!--<div class="container" *ngFor="let item of data3">
+    <br><br>
+<label>username</label>{{item.username}}<br>
+<label>password</label>{{item.password}}<br> 
+<label>types</label>{{item.types}}<br>
+
+<br>
+</div>-->
+
+    <table class="table table-striped">
+        <thead>
+            <th>username:</th>
+            <th>password:</th>
+            <th>types:</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of data3">
+                <td>{{items.username}}</td>
+                <td>{{items.password}}</td>
+                <td>{{items.types}}</td>
+                 
+                <td><button class="btn btn-info" (click)="edit_user(items.username)"> Edit </button></td>
+                <td><button class="btn btn-info" (click)="delete_user(items._id)"> Delete </button></td>
+
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <br>
+
+  <div *ngIf="flag">
+    <span><br><br><br> you can edit users designation down below<br><br><br></span>
+    <form #f1="ngForm" (ngSubmit)="onclick3()">
+     
+        <!--<label><b>username</b></label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required>-->
+        <label><b>Types</b></label>
+        <input placeholder="Enter types" [(ngModel)]="data1.types" name="types" #types required>
+        <button >submit</button>
+    </form>
+</div>
+
+<br>
+<button class="btn btn-info" (click)="click4()"> add user</button>
+<div *ngIf="flag2">
+    <form #f2="ngForm" (ngSubmit)="add_user(f2,ab.value)">
+    <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required>
+    <input type="text" placeholder="Enter password" [(ngModel)]="pass" name="password" #password="ngModel" required>
+    <input type="text" placeholder="Enter email" [(ngModel)]="email" name="email" #abc="ngModel" required>
+     <!--<input type="email" placeholder="Enter email"  name="input" ng-model="email.text" required>-->
+<select #ab>
+  <option value="admin" >Admin</option>
+  <option value="user" >user</option>
+</select> 
+<button>submit</button>
+</form>
+</div>
+
+
+<!--
+    <form #f2="ngForm" (ngSubmit)="delete_user()">
+
+
+        
+        <label><b>username</b></label>
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required>
+        <button (click)="delete_user()">delete</button>
+
+        <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required>
+        <input type="text" placeholder="Enter password" [(ngModel)]="user" name="username" #password="ngModel" required>
+        <button (click)="onclick9()">add user</button>
+ </form>-->
+
+    <br><br>
+    <button class="btn btn-info"  (click)="click3()">click here to browse seasons,series,comics</button>
+
+    <br><br><br>
+<button class="btn btn-info"  (click)="logout()">Logout</button>
+</body>

@@ -1,0 +1,38 @@
+
+<!--/*<form>
+
+<label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required #user>
+<label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<button>submit</button>
+
+</form>
+ <br><br>
+ 
+search: <input  placeholder="enter comic name" name="psw">*/-->
+<br>
+  
+
+<br><br> <br>
+<button class="btn btn-info" (click)="onclick()">click for series</button>
+
+<div class="container" *ngFor="let item of data">
+ 
+   <div *ngIf="flag"  style="font-family:verdana;">
+<!--><img src="{{item.image}}" height="42" width="42"><-->
+
+<br><br>
+<label>series_name:</label>{{item.name}}<br>
+<label>description:</label>{{item.desc}}<br> 
+<label>series_id:</label>{{item.series_id}}<br>
+<label>created_by:</label>{{item.created_by}}<br>
+<label>created_at:</label>{{item.created_at}}<br>
+<label>updated_at:</label>{{item.updated_at}}<br>
+<br>
+</div>
+
+</div>
+<button class="btn btn-info" (click)="onclick2()">click next for seasons</button>
+
+ 

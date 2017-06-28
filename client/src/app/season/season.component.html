@@ -1,0 +1,24 @@
+<button  class="btn btn-default" (click)="onclick()" >click for the seasons</button>
+
+<div class="container" *ngFor="let item of data2">
+ 
+  <div *ngIf="flag">
+<!--><img src="{{item.image}}" height="42" width="42"><-->
+
+<br><br>
+<label>season_name:</label>{{item.name}}<br>
+<!--><label>description:</label>{{item.desc}}<br> <-->
+<!--><label>series_id:</label>{{item.series_id}}<br><-->
+<label>starts_on:</label>{{item.starts_on}}<br>
+<label>ends_on:</label>{{item.ends_on}}<br>
+<label> created_at:</label>{{item.created_at}}<br>
+<!--><label> updated_at:</label>{{item.updated_at}}<br><-->
+<br>
+
+
+</div>
+
+</div>
+
+<button  class="btn btn-info" (click)="onclick2()">click next for comics</button>
+

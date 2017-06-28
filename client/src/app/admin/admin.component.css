@@ -1,0 +1,13 @@
+body{
+    background-color: #e0c6c6;
+}
+.border1{
+    border-style: groove;
+    height: 60%;
+    width: 60%;
+}
+.border2{
+    border-style: groove;
+    height: 40%;
+    width: 60%;
+}

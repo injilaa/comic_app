@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<form  #f1="ngForm" (ngSubmit)="onclick3(f1)">
+
+<input type="text"  name="search" placeholder="Search.." [(ngModel)]="Searchdata">
+  <button class="btn btn-primary" (click)="onclick3()">click</button>
+        <!--<span class="glyphicon glyphicon-search"></span>Search-->
+        </form>
+
+
+<br><br><br>
+<div class="container" >
+  <div *ngFor="let item of data">
+  
+<!--><img src="{{item.image}}" height="42" width="42"><-->
+
+<br><br>
+<label>comic_name:</label>{{item.name}}<br>
+<!--><label>description:</label>{{item.desc}}<br> <-->
+<!--><label>series_id:</label>{{item.series_id}}<br><-->
+<label>story:</label>{{item.story}}<br>
+<label>image:</label>{{item.ends_on}}<br>
+<label> season_id:</label>{{item.created_at}}<br>
+<label> starts_on:</label>{{item.starts_on}}<br>
+<label> ends_on:</label>{{item.ends_on}}<br>
+<label> comments:</label>{{item.comments}}<br>
+<label>  created_at:</label>{{item.created_at}}<br>
+<label>  updated_at:</label>{{item.updated_at}}<br>
+<!--><label> updated_at:</label>{{item.updated_at}}<br><-->
+<br>
+</div>
+</div>
+
+
+<!--
+        <div *ngIf="searchresults">
+  <h3> Search results </h3>
+  <div class="container">
+    <label> Name </label> {{GetSearch.Name}}
+    <br>
+    <img src="{{GetSearch.image}}" height="42" width="42"><br>
+    <label> startson</label> {{GetSearch.starts_on}}
+  </div>
+</div>-->

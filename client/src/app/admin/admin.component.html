@@ -1,0 +1,47 @@
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Hey admin</a>
+    </div>
+  </div>
+    <button  class="btn btn-info" (click)="logout()">Logout</button>      
+</nav>
+<button class="btn btn-info" (click)="click3()">browse </button>
+
+
+
+ <div class="border1" *ngFor="let item of data2">
+<img src="http://localhost:3000/{{item.image}}" height="58%" width="100%">
+<label >comic_name:</label>{{item.name}}<br>
+<label >story:</label>{{item.story}}<br>
+<label > starts_on:</label>{{item.starts_on}}<br>
+<label > ends_on:</label>{{item.ends_on}}<br>
+<label > comments:</label>{{item.comments}}<br>
+<label >  created_at:</label>{{item.created_at}}<br>
+<label>  updated_at:</label>{{item.updated_at}}<br>
+<button class="btn btn-info" (click)="delete_comic(item._id)"> Delete </button>
+ <br></div><br>
+
+ 
+ 
+ <button class="btn btn-info" (click)="click6()">add comic</button>
+ <div class="border2" *ngIf="flag1">
+<form (ngSubmit)="AddComics(drop.value)" #DetailsForm='ngForm'>
+      <label for="single">select season</label>
+  <select class="btn btn-info" #drop>
+   <option *ngFor="let item of data88" value={{item._id}} >{{item.name}}</option>
+   </select> <br>
+
+  <label for="single">Comic Name</label>   
+    <input class="form-group" class="form-control" type="text" name="Comic" #Comic placeholder="Enter the Comic name" [(ngModel)]="NewComic.name"><br>
+ 
+  <label for="single">Comic Description</label>   
+     <input type="text" class="form-control" name="Data" #Starts placeholder="Enter DAta" [(ngModel)]="NewComic.story"><br>
+    <label for="single">add picture</label>
+     <input type="file" name="single" accept="image/*" (change)="changeListener($event)" /><br>
+
+   <button class="btn btn-info">SUBMIT</button>
+  </form>
+ </div>
+</body>

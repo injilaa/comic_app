@@ -1,0 +1,20 @@
+
+<body>
+    <br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<form  #f1="ngForm" (ngSubmit)="onclick3(f1)">
+<div class="groove">
+<label style="color:whitesmoke"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" class="form-control" [(ngModel)]="user" name="username" #username="ngModel" required >
+<label style="color:whitesmoke"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" class="form-control" [(ngModel)]="pass" name="password" #password="ngModel" required>
+<br><br><button (click)="onclick3()"class="btn btn-primary"  >submit</button>
+</div>
+</form>
+<br><br>
+<button (click)="onclick6()"class="btn btn-primary"  >search comics</button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
